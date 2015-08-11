@@ -1,7 +1,7 @@
 {
   "name": "http-troll",
   "description": "lightweight http reverse proxy to simulate faulty services/connections",
-  "version": "1.0.0-alpha1",
+  "version": "1.0.0",
   "bin" : {
     "troll" : "./app/cli/index.js"
   },
