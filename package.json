@@ -1,0 +1,43 @@
+{
+  "name": "http-troll",
+  "description": "lightweight http reverse proxy to simulate faulty services/connections",
+  "version": "1.0.0-alpha1",
+  "bin" : {
+    "troll" : "./app/cli/index.js"
+  },
+  "main": "./app/run.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/mrcrgl/http-troll.git"
+  },
+  "keywords": [
+    "troll",
+    "http",
+    "proxy",
+    "reverse",
+    "reverse-proxy",
+    "lightweight",
+    "test",
+    "fault-simulation"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.0",
+    "node-getopt": "^0.2.3"
+  },
+  "devDependencies": {
+    "async": "^1.4.0",
+    "chai": "^3.2.0",
+    "coveralls": "^2.11.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-env": "^0.4.4",
+    "grunt-jscs": "^2.0.0",
+    "grunt-mocha-istanbul": "^2.4.0",
+    "grunt-mocha-test": "^0.12.7",
+    "istanbul": "^0.3.17",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.2.5",
+    "qs": "^4.0.0"
+  }
+}
