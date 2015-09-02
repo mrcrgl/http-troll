@@ -6,6 +6,7 @@ var GetOpt = require('node-getopt'),
 var getopt = new GetOpt([
     ['p', 'port=ARG', 'port for proxy to listen on'],
     ['l', 'access-log', 'print access log'],
+    ['r', 'replay', 'replays previously made calls'],
     ['', 'no-comment'],
     ['h', 'help', 'display this help']/*,
     ['v', 'version', 'show version']*/
@@ -26,8 +27,6 @@ getopt.setHelp(
     '\n' +
     'Respository:  https://github.com/mrcrgl/http-troll'
 );
-
-// getopt.bindHelp();
 
 module.exports = {
     getopt: getopt,

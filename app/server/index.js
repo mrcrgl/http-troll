@@ -3,7 +3,7 @@
 var http = require('http'),
     routeConfiguration = require('./routes/configure'),
     routeTroll = require('./routes/troll'),
-    printf = require('../console').printf,
+    printf = require('./lib/console').printf,
     chalk = require('chalk');
 
 var storage = require('./lib/persist-storage').getInstance();
@@ -25,7 +25,20 @@ function startServer(options, callback) {
 
         res.end = function () {
             if (options.accessLog) {
-                printf('%d - %s %s - %dms', res.statusCode, req.method, req.url, Date.now() - startTime);
+                var statusCode = res.statusCode;
+
+                if (statusCode >= 200 && statusCode < 300) {
+                    statusCode = chalk.green(statusCode);
+                } else if (statusCode >= 300 && statusCode < 500) {
+                    statusCode = chalk.yellow(statusCode);
+                } else if (statusCode >= 500) {
+                    statusCode = chalk.red(statusCode);
+                }
+
+                printf('%s - %s %s - %dms',
+                    statusCode,
+                    chalk.grey(req.method), req.url,
+                    Date.now() - startTime);
             }
 
             originalEnd.apply(res, arguments);

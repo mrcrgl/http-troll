@@ -1,14 +1,14 @@
 {
   "name": "http-troll",
   "description": "lightweight http reverse proxy to simulate faulty services/connections",
-  "version": "1.0.0",
-  "bin" : {
-    "troll" : "./app/cli/index.js"
+  "version": "1.1.0",
+  "bin": {
+    "troll": "./app/cli/index.js"
   },
   "main": "./app/run.js",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/mrcrgl/http-troll.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrcrgl/http-troll.git"
   },
   "keywords": [
     "troll",
@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "chalk": "^1.1.0",
+    "keypress": "^0.2.1",
     "node-getopt": "^0.2.3"
   },
   "devDependencies": {

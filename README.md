@@ -19,7 +19,41 @@ Start reverse proxy to `example.com`, listening on port 7000 with enabled access
 troll http://example.com -p 7000 --access-log
 ```
 
-Once started, it can be configured via http api. These changes will be applied immediately.
+### Options
+```
+Usage: troll http://example.com [OPTIONS]
+
+  -p, --port=ARG    port for proxy to listen on
+  -l, --access-log  print access log
+  -r, --replay      replays previously made calls
+  -h, --help        display this help
+```
+
+### Configure via console
+
+Once the server is started, you can just start typing those commands. They will be applied immediately. 
+
+#### Set error rate to 50%
+
+```
+Just type in your terminal: 50%
+```
+
+#### Set response time delay to randomly 50-150ms
+
+```
+Just type in your terminal: 50,150
+```
+
+#### Stop the troll
+
+```
+Just type... ye you guess it: stop
+```
+
+### Configure via HTTP
+
+Once started, it can be configured via console or http api. These changes will be applied immediately.
 
 #### set response time to 20 to 500ms
 
