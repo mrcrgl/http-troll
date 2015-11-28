@@ -3,7 +3,10 @@ http-troll
 
 ## About
 
-This tool is nice to simulate slow/flattering webservices. You can configure random response times and a HTTP 503 response ratio.
+This tool is nice to simulate slow or fickle webservices. Once started, it provides you a HTTP endpoint pointing 
+to your origin of choice.
+
+You can configure random response times and a HTTP 503 response ratio.
 
 ## Installation
 
